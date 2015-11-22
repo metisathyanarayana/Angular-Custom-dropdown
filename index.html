@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Dropdown</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="dropdown-container" ng-app="Joy" ng-controller="dropdownCtrl">
+        <div class="input-container">
+            <span class="tags" ng-repeat="tag in tags">
+            <span class="one-tag" ng-bind="tag"></span>
+            </span><!-- 
+            <label for="custom-dropdown"></label> -->
+            <input type="text" ng-model="key" ng-click="toggle()" ng-keyup="" />
+            <img src="plus-icon.png" ng-show="filtered.length>0? false:true" ng-click="addItem($event)">
+        </div>
+        <div>
+            <ul class="dropdown-list" ng-show="visible" ng-click="toggle()"> 
+                <li class="options" ng-repeat="item in filtered =(items | filter:key )"  ng-bind="item"ng-click="setValue(item)">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

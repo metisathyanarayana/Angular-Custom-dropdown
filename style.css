@@ -1,0 +1,43 @@
+.dropdown-container {
+ 	 font-family: "arial";}
+
+.dropdown-list {
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.dropdown-list .options {
+    list-style: none;
+}
+
+.dropdown-list .options:hover {
+    background-color: #ccc;
+}
+
+.one-tag {
+    display: inline-block;
+    padding:5px;
+}
+
+input {   
+    display: inline;
+    float: left;
+    padding:5px;
+}
+
+.holder,
+.tags {
+    border: 1px solid #000;
+    margin: 5px;
+    float: left;
+}
+
+ul li {
+    margin-top: 5px;
+}
+
+.input-container {
+    height: 36px;
+}
